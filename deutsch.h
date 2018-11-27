@@ -52,7 +52,7 @@
 #define DE_UE KC_LBRC
 #define DE_OE KC_SCLN
 
-#define DE_CIRC KC_GRAVE // accent circumflex ^ ppppööoand ring °
+#define DE_CIRC KC_GRAVE // accent circumflex ^ oand ring °
 #define DE_ACUT KC_EQL // accent acute ´ and grave `
 #define DE_PLUS KC_RBRC // + and * and ~
 #define DE_HASH KC_BSLS // # and '
