@@ -92,5 +92,3 @@
 #define DE_EURO ALGR(KC_E) // €
 #define DE_TILD ALGR(DE_PLUS) // ~
 #define DE_PIPE ALGR(DE_LESS) // |
-
-#endif
