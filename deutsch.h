@@ -1,7 +1,3 @@
-
-#ifndef KEYMAP_GERMAN
-#define KEYMAP_GERMAN
-
 #include "keymap.h"
 
 // Alt gr
