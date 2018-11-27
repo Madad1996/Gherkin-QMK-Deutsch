@@ -1,0 +1,15 @@
+#pragma once
+
+/* prevent stuck modifiers */
+#define PREVENT_STUCK_MODIFIERS
+
+#define RGB_DI_PIN F6
+#define RGBLIGHT_ANIMATIONS
+#define RGBLIGHT_HUE_STEP 8
+#define RGBLIGHT_SAT_STEP 8
+#define RGBLIGHT_VAL_STEP 8
+#define RGBLED_NUM 10
+#define TAPPING_TERM 200
+#define BACKLIGHT_PIN B5
+#define BACKLIGHT_LEVELS 5
+#define BACKLIGHT_BREATHING
