@@ -8,4 +8,4 @@ German Layout for QMK powered Gherkin Keyboard
 //
 
 Layout:
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt text](https://github.com/Madad1996/Gherkin-QMK-Deutsch/blob/master/Layout.png)
