@@ -22,12 +22,13 @@ enum {
     UUE,
     OOE,
     SS,
-    BMINUS,
+    BKOMMA,
     NPUNKT,
-    MKOMMA,
+    MMINUS,
     EQLQST,
     SBS,
-
+    CPSL,
+    EEUR,
 
 };
 //Abkürzungen
@@ -45,39 +46,41 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [UUE] = ACTION_TAP_DANCE_DOUBLE(KC_U,DE_UE),
     [OOE] = ACTION_TAP_DANCE_DOUBLE(KC_O,DE_OE),
     [SS] = ACTION_TAP_DANCE_DOUBLE(KC_S,DE_SS),
-    [BMINUS] = ACTION_TAP_DANCE_DOUBLE(KC_B,DE_MINS),
+    [BKOMMA] = ACTION_TAP_DANCE_DOUBLE(KC_B,DE_COMM),
     [NPUNKT] = ACTION_TAP_DANCE_DOUBLE(KC_N,DE_DOT),
-    [MKOMMA] = ACTION_TAP_DANCE_DOUBLE(KC_M,DE_COMM),
+    [MMINUS] = ACTION_TAP_DANCE_DOUBLE(KC_M,DE_MINS),
     [EQLQST] = ACTION_TAP_DANCE_DOUBLE(DE_EQL,DE_QST),
     [SBS] = ACTION_TAP_DANCE_DOUBLE(DE_SLSH,DE_BSLS),
+    [CPSL] = ACTION_TAP_DANCE_DOUBLE(KC_LSHIFT,KC_CAPSLOCK),
+    [EEUR] = ACTION_TAP_DANCE_DOUBLE(KC_E,LALT(KC_E)),
 };
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_QWERTZ] = LAYOUT_ortho_3x10(
-    TD(QAT), WCOPA , KC_E, KC_R, TTOOLS,    KC_Y,    TD(UUE),    KC_I,    TD(OOE),  KC_P ,
+    KC_Q, WCOPA , KC_E, KC_R, TTOOLS,    KC_Y,    TD(UUE),    KC_I,    TD(OOE),  KC_P ,
     TD(AAE),TD(SS),KC_D,KC_F,KC_G,KC_H,KC_J,    KC_K,KC_L,    KC_ENTER,
-    ZSONDER,KC_X,KC_C,KC_V,LT(_FUNC,KC_SPACE), LT(_FUNC,KC_BSPC),  TD(BMINUS),TD(NPUNKT),TD(MKOMMA), KC_LSHIFT
+    ZSONDER,LT(_FUNC,KC_X),KC_C,KC_V,KC_SPACE, KC_BSPACE,  TD(BKOMMA),TD(NPUNKT),TD(MMINUS), TD(CPSL)
   ),
-
+//,.-
   [_TOOLS] = LAYOUT_ortho_3x10(
-    _______,   _______,   _______,   _______,   _______,  _______,   _______,   _______,  _______,    RESET,
-    BL_TOGG,   BL_INC,    _______,   RGB_MOD ,  RGB_VAI,  RGB_HUI,   _______,   KC_UP,    _______,    _______,
-    BL_BRTG,   BL_DEC,    _______,   RGB_TOG,   RGB_VAD , RGB_HUD,   KC_LEFT,   KC_DOWN,  KC_RIGHT,   _______
+    KC_VOLD,   KC_VOLU,   KC_MUTE,   _______,   _______,  _______,   _______,   _______,  _______,    RESET,
+    BL_TOGG,   BL_INC,    KC_VOLU,   RGB_MOD ,  RGB_VAI,  RGB_HUI,   _______,   KC_UP,    _______,    _______,
+    BL_BRTG,   BL_DEC,    KC_VOLD,   RGB_TOG,   RGB_VAD , RGB_HUD,   KC_LEFT,   KC_DOWN,  KC_RIGHT,   DE_ALGR
   ),
 
 
     [_FUNC] = LAYOUT_ortho_3x10(
-      KC_ESC,    _______,    KC_DEL,    _______,    _______,    _______,      KC_F1,    KC_F2,    KC_F3,    KC_F4,
-      KC_TAB,    _______,    _______,    _______,    _______,    _______,      KC_F5,    KC_F6,    KC_F7,    KC_F8,
-      KC_LCTRL,    KC_LGUI, KC_LALT   ,   _______,    _______,    _______,      KC_F9,    KC_F10,   KC_F11,   KC_F12
+      KC_ESC,    _______,    KC_DEL,    KC_1,    KC_2,   KC_3,      KC_F1,    KC_F2,    KC_F3,    KC_F4,
+      KC_TAB,    _______,   KC_0,   KC_4,    KC_5,    KC_6,      KC_F5,    KC_F6,    KC_F7,    KC_F8,
+      KC_LCTRL,  _______, KC_LALT   ,   KC_7,    KC_8,    KC_9,      KC_F9,    KC_F10,   KC_F11,   KC_F12
     ),
 
     [_SONDER] = LAYOUT_ortho_3x10(
     DE_EXLM,    DE_DQOT,    DE_PARA,  DE_DLR ,    DE_PERC ,   DE_AMPR,    TD(SBS) ,   DE_LPRN,    DE_RPRN,    TD(EQLQST),
-    DE_AT,       KC_A,       KC_A,     KC_A,        _______,    _______,     _______,    _______,    _______,   _______,
-    _______,    KC_CUT,       KC_COPY,     KC_PASTE,        _______,    _______,     _______,    _______,    _______,    KC_LSHIFT
+    DE_AT,       _______,       _______,     _______,        _______,    _______,     _______,     KC_UP,    _______,   _______,
+    _______,    KC_COMM,       KC_DOT,     KC_MINUS,        _______,    _______,     KC_LEFT,   KC_DOWN,  KC_RIGHT,    KC_LSHIFT
 
     ),
     [_WCOPA] = LAYOUT_ortho_3x10(

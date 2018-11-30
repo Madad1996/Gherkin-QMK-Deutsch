@@ -87,7 +87,7 @@
 #define DE_LBRC ALGR(KC_8) // [
 #define DE_RBRC ALGR(KC_9) // ]
 #define DE_RCBR ALGR(KC_0) // }
-#define DE_BSLS ALGR(DE_SS) // backslash
+#define DE_BSLS ALGR(KC_MINS) // backslash
 #define DE_AT  ALGR(KC_Q) // @
 #define DE_EURO ALGR(KC_E) // €
 #define DE_TILD ALGR(DE_PLUS) // ~
